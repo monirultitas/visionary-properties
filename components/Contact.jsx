@@ -48,16 +48,15 @@ export function Contact() {
   ];
 
   const inputCls =
-    "w-full rounded-xl border border-white/10 bg-night-900/60 px-4 py-3 text-sm text-white placeholder-white/35 outline-none transition-colors focus:border-gold-400/50";
+    "w-full rounded-xl border border-ink-900/15 bg-white px-4 py-3 text-sm text-ink-900 placeholder-ink-400 outline-none transition-colors focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20";
 
   return (
-    <section id="contact" className="relative py-24 sm:py-32">
+    <section id="contact" className="relative bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow={t.contact.eyebrow}
           title={t.contact.title}
           subtitle={t.contact.subtitle}
-          light
         />
 
         <div className="mt-14 grid gap-8 lg:grid-cols-5 lg:gap-10">
@@ -66,14 +65,14 @@ export function Contact() {
               <Reveal key={i} delay={0.08 * i}>
                 <a
                   href={c.href || undefined}
-                  className="flex items-start gap-4 rounded-2xl border border-white/10 bg-night-800/50 p-5 transition-colors hover:border-gold-400/30"
+                  className="flex items-start gap-4 rounded-2xl border border-ink-900/10 bg-cream-50 p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold-500/40 hover:shadow-lg"
                 >
-                  <span className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-xl bg-gold-500/10 text-gold-300">
+                  <span className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-xl bg-gold-500/10 text-gold-600">
                     <c.icon className="h-5 w-5" />
                   </span>
                   <div>
-                    <div className="text-xs uppercase tracking-wide text-white/45">{c.label}</div>
-                    <div className="mt-1 text-sm font-medium text-white">{c.value}</div>
+                    <div className="text-xs uppercase tracking-wide text-ink-400">{c.label}</div>
+                    <div className="mt-1 text-sm font-medium text-ink-900">{c.value}</div>
                   </div>
                 </a>
               </Reveal>
@@ -81,14 +80,14 @@ export function Contact() {
           </div>
 
           <Reveal delay={0.15} className="lg:col-span-3">
-            <div className="rounded-3xl border border-white/10 bg-night-800/50 p-6 sm:p-8">
+            <div className="rounded-3xl border border-ink-900/10 bg-cream-50 p-6 shadow-sm sm:p-8">
               {sent ? (
                 <div className="flex flex-col items-center justify-center py-16 text-center">
-                  <CheckCircle2 className="h-14 w-14 text-jade-400" />
-                  <p className="mt-4 max-w-sm text-base text-white/80">{t.contact.success}</p>
+                  <CheckCircle2 className="h-14 w-14 text-jade-600" />
+                  <p className="mt-4 max-w-sm text-base text-ink-700">{t.contact.success}</p>
                   <button
                     onClick={() => setSent(false)}
-                    className="mt-6 text-sm font-semibold text-gold-300 underline-offset-4 hover:underline"
+                    className="mt-6 text-sm font-semibold text-gold-600 underline-offset-4 hover:underline"
                   >
                     ↺
                   </button>
@@ -101,11 +100,11 @@ export function Contact() {
                   </div>
                   <input name="email" type="email" placeholder={t.contact.email} className={inputCls} />
                   <select name="interest" className={inputCls} defaultValue="">
-                    <option value="" disabled className="bg-night-900">
+                    <option value="" disabled>
                       {t.contact.interest}
                     </option>
                     {projects.map((p) => (
-                      <option key={p.slug} value={p.name.en} className="bg-night-900">
+                      <option key={p.slug} value={p.name.en}>
                         {p.name[lang]}
                       </option>
                     ))}

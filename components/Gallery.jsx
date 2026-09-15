@@ -13,13 +13,12 @@ export function Gallery() {
   const [active, setActive] = useState(null);
 
   return (
-    <section id="gallery" className="relative py-24 sm:py-32">
+    <section id="gallery" className="relative border-y border-ink-900/5 bg-cream-100 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow={t.gallery.eyebrow}
           title={t.gallery.title}
           subtitle={t.gallery.subtitle}
-          light
         />
 
         <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
@@ -31,7 +30,7 @@ export function Gallery() {
             >
               <button
                 onClick={() => setActive(img)}
-                className="group relative block h-full w-full overflow-hidden rounded-2xl border border-white/10"
+                className="group relative block h-full w-full overflow-hidden rounded-2xl border border-ink-900/10 shadow-sm"
               >
                 <img
                   src={img.src}
@@ -40,7 +39,7 @@ export function Gallery() {
                     i % 6 === 0 ? "h-full min-h-[220px]" : "h-40 sm:h-52"
                   }`}
                 />
-                <div className="absolute inset-0 bg-night-950/0 transition-colors group-hover:bg-night-950/30" />
+                <div className="absolute inset-0 bg-ink-900/0 transition-colors group-hover:bg-ink-900/25" />
               </button>
             </Reveal>
           ))}
