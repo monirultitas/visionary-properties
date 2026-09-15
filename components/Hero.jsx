@@ -33,10 +33,12 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-gold-400/30 bg-gold-500/10 px-4 py-1.5 text-xs font-medium text-gold-300 backdrop-blur-sm"
+          className="mb-6 inline-flex w-fit items-center gap-2.5 rounded-full border border-gold-400/50 bg-gold-500/15 px-5 py-2.5 backdrop-blur-md shadow-lg shadow-gold-500/15"
         >
-          <Sparkles className="h-3.5 w-3.5" />
-          {t.hero.badge}
+          <Sparkles className="h-4 w-4 text-gold-300" />
+          <span className="bg-gold-gradient bg-clip-text text-sm font-bold uppercase tracking-[0.12em] text-transparent sm:text-base">
+            {t.hero.badge}
+          </span>
         </motion.div>
 
         <motion.h1
