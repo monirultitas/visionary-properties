@@ -26,7 +26,7 @@ export function About() {
                 <Building className="h-5 w-5" />
               </span>
               <div>
-                <div className="font-display text-2xl font-semibold text-ink-900">1452</div>
+                <div className="font-display text-2xl font-semibold text-ink-900">1500</div>
                 <div className="text-xs text-ink-400">sq.ft / share</div>
               </div>
             </div>

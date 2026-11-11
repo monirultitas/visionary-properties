@@ -11,8 +11,8 @@ export function Hero() {
   const stats = [
     { value: 2, label: t.hero.stat1 },
     { value: 12, prefix: "G+", label: t.hero.stat2 },
-    { value: 1452, label: t.hero.stat3 },
-    { value: 11, suffix: "+", label: t.hero.stat4 },
+    { value: 1500, label: t.hero.stat3 },
+    { value: 24, label: t.hero.stat4 },
   ];
 
   return (
