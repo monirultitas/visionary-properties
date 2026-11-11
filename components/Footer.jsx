@@ -61,11 +61,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-white/55">
               <li className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 flex-shrink-0 text-gold-400" />
-                {company.phone}
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Mail className="h-4 w-4 flex-shrink-0 text-gold-400" />
-                {company.email}
+                {company.phone} · {company.phone2} · {company.phone3}
               </li>
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-400" />

@@ -8,7 +8,7 @@ export function FloorPlan() {
   const { t } = useLang();
 
   const towers = [
-    { name: t.floor.towerA, units: t.floor.towerAunits, count: 5, accent: "gold" },
+    { name: t.floor.towerA, units: t.floor.towerAunits, count: 6, accent: "gold" },
     { name: t.floor.towerB, units: t.floor.towerBunits, count: 6, accent: "jade" },
   ];
 

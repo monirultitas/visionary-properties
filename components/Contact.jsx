@@ -42,8 +42,7 @@ export function Contact() {
   };
 
   const cards = [
-    { icon: Phone, label: t.contact.callUs, value: company.phone, href: `tel:${company.phone.replace(/\s/g, "")}` },
-    { icon: Mail, label: t.contact.emailUs, value: company.email, href: `mailto:${company.email}` },
+    { icon: Phone, label: t.contact.callUs, value: `${company.phone} · ${company.phone2} · ${company.phone3}`, href: `tel:${company.phone.replace(/\s/g, "")}` },
     { icon: MapPin, label: t.contact.visitUs, value: company.address[lang] },
   ];
 
